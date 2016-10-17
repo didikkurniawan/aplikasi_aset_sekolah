@@ -1,0 +1,26 @@
+PSBO KELOMPOK 8
+KASUS : PENGELOLAAN ASSET DI SMA X X XXXX
+
+Anggota Kelompok :
+
+Muhammad Rahman Salim (123040052)
+Arif Busthomi (123040034)
+Didik Kurniawan (123040019)
+Adhitya Ekaputra (123040063)
+Yuhsyar Hariwijaya (123040036)
+
+Login ( akses dibedakan berdasaarkan job masing-masing )
+USERNAME		PASSWORD
+Tata Usaha			asdfasdf	
+Petugas Logistik		asdfasdf
+Petugas Sarana		asdfasdf		
+Petugas Lapangan		asdfasdf
+
+Untuk Database berada di folder database dengan nama "manajemen_asset.sql"
+
+agar program dapat berjalan dengan baik add terlebih dahulu librarty pada folder library
+
+Aplikasi dapat melakukan sms apabila login sebagian tata usaha
+
+
+TERIMA KASIH

@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Manajemen_Asset" language="groovy" pageWidth="842" pageHeight="1190" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3decc5ab-84db-4376-b03d-e8812c87a962">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="110"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="New Dataset 1" uuid="8ce36695-c00f-4c80-aaf3-484dc9e60b4a">
+		<queryString language="SQL">
+			<![CDATA[select * from asset]]>
+		</queryString>
+		<field name="idAsset" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="namaAsset" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="jenisAsset" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="merk" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="warna" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="tanggalPembelian" class="java.sql.Date">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="harga" class="java.lang.Double">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="lokasi" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="namaPetugas" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+	</subDataset>
+	<queryString>
+		<![CDATA[SELECT
+     now(),
+     asset.`idAsset`,
+     asset.`namaAsset`,
+     asset.`merk`,
+     asset.`warna`,
+     asset.`tanggalPembelian`,
+     asset.`harga`,
+     asset.`lokasi`,
+     asset.`namaPetugas`
+FROM
+     `asset` asset]]>
+	</queryString>
+	<field name="now()" class="java.sql.Timestamp"/>
+	<field name="idAsset" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="namaAsset" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="merk" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="warna" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tanggalPembelian" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="harga" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="lokasi" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="namaPetugas" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="111" splitType="Stretch">
+			<frame>
+				<reportElement x="26" y="10" width="763" height="90" backcolor="#F0F0F0" uuid="a3569742-a225-4a51-a0fc-4427943d75a8"/>
+				<staticText>
+					<reportElement x="224" y="43" width="289" height="47" uuid="6cf9dc4b-c54c-4405-b4c8-e3741bdd5da8"/>
+					<textElement textAlignment="Center">
+						<font fontName="Cambria" size="36" isBold="true"/>
+					</textElement>
+					<text><![CDATA[KOTA WONOGIRI]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="195" y="0" width="360" height="43" uuid="96da1a2c-210e-48a4-83dd-7b5f94af7963"/>
+					<textElement textAlignment="Center">
+						<font fontName="Cambria" size="36" isBold="true"/>
+					</textElement>
+					<text><![CDATA[SMK JAVAXSWING 01]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="101" splitType="Stretch">
+			<staticText>
+				<reportElement x="26" y="45" width="763" height="16" uuid="04173e95-1e2e-472b-9fb3-e4d2189f43f4"/>
+				<textElement textAlignment="Center">
+					<font fontName="Cambria" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No.Telp : 02214432]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="61" width="763" height="16" uuid="3da08198-6201-4703-81e1-2dfb8578e014"/>
+				<textElement textAlignment="Center">
+					<font fontName="Cambria" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Email : javaxswing01@javax.ac.id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="29" width="763" height="16" uuid="09222e3d-e7eb-4007-bb08-f91d127ce6ac"/>
+				<textElement textAlignment="Center">
+					<font fontName="Cambria" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jalan Setiabudi No 21 Girimarto , Wonogiri]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="77" width="763" height="18" uuid="c877c115-01f0-4b88-8f5e-c3677dece739"/>
+				<textElement textAlignment="Center">
+					<font fontName="Cambria" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kode Pos : 57683]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="89">
+			<staticText>
+				<reportElement x="26" y="20" width="223" height="20" uuid="d70d8fe9-4486-44df-8208-605603928215"/>
+				<textElement>
+					<font fontName="Cambria" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nomor       : XX1/SM12/SMK01]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="40" width="254" height="20" uuid="cf1932aa-aa92-4fa4-8d8d-1d8956a27513"/>
+				<textElement>
+					<font fontName="Cambria" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Lampiran  : 1 Halaman]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="60" width="400" height="20" uuid="d02ab9fc-ffd9-47ad-b223-d8106dcc27ce"/>
+				<textElement>
+					<font fontName="Cambria" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Perihal      : Laporan Asset pada SMK Javaswing 01]]></text>
+			</staticText>
+			<line>
+				<reportElement x="10" y="10" width="794" height="1" uuid="8d6bb365-1f5d-4504-94da-ded5c473e817"/>
+			</line>
+			<line>
+				<reportElement x="10" y="14" width="794" height="1" uuid="e77a61f5-c128-46a7-a959-9055fbe01751"/>
+			</line>
+			<textField>
+				<reportElement x="686" y="20" width="100" height="20" uuid="9188f088-e0c1-4788-90a8-dc28643171ce"/>
+				<textFieldExpression><![CDATA[$F{now()}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="294" splitType="Stretch">
+			<componentElement>
+				<reportElement key="table 1" style="table 1" x="0" y="16" width="360" height="140" uuid="019dcbcb-a81d-47f2-a2e1-50db3c0e3009"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="New Dataset 1" uuid="c51b7e20-c996-4597-b962-be47bb4f7f94">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="90" uuid="30ce6fc6-dbcf-415c-8d81-853bd76b6bd2">
+						<jr:tableHeader style="table 1_TH" height="2" rowSpan="1"/>
+						<jr:columnHeader style="table 1_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="237d08ce-bc8b-496a-854a-8c031b248d7d"/>
+								<textElement textAlignment="Center"/>
+								<text><![CDATA[idAsset]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="a0547b82-239a-4c06-9b81-8bfd22c21fdc"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{idAsset}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="93f8a143-c212-410f-9988-4ee1a210badc">
+						<jr:tableHeader style="table 1_TH" height="2" rowSpan="1"/>
+						<jr:columnHeader style="table 1_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="1fc26c06-f578-4cec-bd72-3399fa7d62b2"/>
+								<textElement textAlignment="Center"/>
+								<text><![CDATA[namaAsset]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="5eceffb9-09af-45db-97e8-611475afffd2"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{namaAsset}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="b2188d21-e02e-4e55-8e9f-6f863d837cdf">
+						<jr:tableHeader style="table 1_TH" height="2" rowSpan="1"/>
+						<jr:columnHeader style="table 1_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="950bad4d-28b5-42f9-9c55-5fb333cf4981"/>
+								<textElement textAlignment="Center"/>
+								<text><![CDATA[jenisAsset]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="5c8c1ce2-6c75-480a-8895-31cc7f822f6d"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{jenisAsset}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="b2b0f52b-7620-497f-909b-90e10c36e53e">
+						<jr:tableHeader style="table 1_TH" height="2" rowSpan="1"/>
+						<jr:columnHeader style="table 1_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="2094812c-d3a0-4db7-afa7-e396ae3bb885"/>
+								<textElement textAlignment="Center"/>
+								<text><![CDATA[merk]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="86bad114-bf03-402b-8a10-8e2f6cbb900e"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{merk}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="b0a3ae62-a58e-4ad7-8a5a-0095b82e8ad8">
+						<jr:tableHeader style="table 1_TH" height="2" rowSpan="1"/>
+						<jr:columnHeader style="table 1_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="63b00541-4157-4f6f-b2c5-57d962462f4d"/>
+								<textElement textAlignment="Center"/>
+								<text><![CDATA[warna]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="9d06867b-7fef-4275-b091-069341c242e0"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{warna}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="4bec84b7-e320-4f08-bf9a-9edfe533725d">
+						<jr:tableHeader style="table 1_TH" height="2" rowSpan="1"/>
+						<jr:columnHeader style="table 1_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="049dd4f1-044a-4609-8649-783ab5270f14"/>
+								<textElement textAlignment="Center"/>
+								<text><![CDATA[tanggalPembelian]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="c7d7aa26-5afd-417b-8307-72d88935d2a3"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{tanggalPembelian}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="1a248eb1-6b4a-44f6-8dae-79c1fec440ec">
+						<jr:tableHeader style="table 1_TH" height="2" rowSpan="1"/>
+						<jr:columnHeader style="table 1_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="ebeeaada-c470-4390-bc7e-8395a2f19091"/>
+								<textElement textAlignment="Center"/>
+								<text><![CDATA[harga]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="729a0265-6b8c-4f84-b084-a6dfadd7a894"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{harga}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="c83f48f6-5953-4d27-9210-4769323d1b23">
+						<jr:tableHeader style="table 1_TH" height="2" rowSpan="1"/>
+						<jr:columnHeader style="table 1_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="83149638-9ef7-410b-9c17-e78dfa7278b0"/>
+								<textElement textAlignment="Center"/>
+								<text><![CDATA[lokasi]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="95675cca-5b7e-4439-9d03-14d879e9cdfa"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{lokasi}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="866108c9-1d17-4454-b787-43aa2749d237">
+						<jr:tableHeader style="table 1_TH" height="2" rowSpan="1"/>
+						<jr:columnHeader style="table 1_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="0481d0ae-e4b9-4171-98f8-57dd2e1f47d0"/>
+								<textElement textAlignment="Center"/>
+								<text><![CDATA[namaPetugas]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="2ed0d5c3-3e75-48d7-9121-9885f3193781"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{namaPetugas}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="110" splitType="Stretch">
+			<staticText>
+				<reportElement x="686" y="11" width="100" height="17" uuid="db252120-cbe4-4f7d-9c38-15ed42e3c4f5"/>
+				<text><![CDATA[Mengetahui :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="689" y="90" width="100" height="20" uuid="5ea3b80e-cdc5-49eb-bc85-d87be0ded409"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Tata Usaha]]></text>
+			</staticText>
+			<line>
+				<reportElement x="689" y="89" width="100" height="1" uuid="30fdab70-e5aa-45ee-9520-5e6cca7da9b3"/>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="42" splitType="Stretch">
+			<staticText>
+				<reportElement x="26" y="14" width="760" height="20" uuid="e74fbcda-7f5b-4a24-92c6-fb04b583a6b1"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Copyright (c) 2014 INFORMATIKA UNPAS ( Blood Deamond )]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
